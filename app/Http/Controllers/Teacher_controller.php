@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Teacher_Modal;
+use app\Models\Teacher_model;
 
 class Teacher_controller extends Controller
 {
@@ -28,7 +28,7 @@ class Teacher_controller extends Controller
             'teacherRePassword' => 'required|same:teacherPassword',
         ]); */
 
-        $teacherModal = new Teacher_Modal();
+        $teacherModal = new Teacher_model();
         $teacherModal->teacher_name = $request->teacherName;
         $teacherModal->teacherEmail = $request->teacherEmail;
         $teacherModal->teacherPassword = $request->teacherPassword;

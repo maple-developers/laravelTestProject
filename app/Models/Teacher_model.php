@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Teacher_Modal extends Model
+class Teacher_model extends Model
 {
-    use HasFactory;
 }
