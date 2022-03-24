@@ -13,7 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('teacher', function (Blueprint $table) {
+            $table->bigIncrements('teacher_id');
+            $table->string('teacher_name');
+            $table->string('teacher_email');
+            $table->string('teacher_password');
+            $table->timestamp('added_at')->default('now');
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('teacher');
     }
 };

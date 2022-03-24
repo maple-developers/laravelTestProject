@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Home;
+use App\Http\Controllers\Teacher_controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Home::class, 'index']);
+Route::get('/addTeacher', [Teacher_controller::class, 'index']);
+Route::post('/addTeacher', [Teacher_controller::class, 'storeTeacher']);
